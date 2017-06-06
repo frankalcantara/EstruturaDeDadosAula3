@@ -1,12 +1,12 @@
 /*
-* Criar um programa que contenha a função que retorne se um determinado número é primo. 
-* A função recebera como argumento um número informado e retornará a informação desejada.
+* Criar um programa que contenha a funÃ§Ã£o que retorne se um determinado nÃºmero Ã© primo. 
+* A funÃ§Ã£o recebera como argumento um nÃºmero informado e retornarÃ¡ a informaÃ§Ã£o desejada.
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-//protótipos
+//protÃ³tipos
 int primo(int);
 
 
@@ -26,14 +26,18 @@ void main() {
 	system("Pause");
 }
 
-//definições
+//definiÃ§Ãµes
 int primo(int num) {
+
+	// 0 e 1 nÃ£o sÃ£o primos
+	if(num < 2) return 0; 
+	
 	for (int i = 2; i < (num - 1); i++)
-		if ((num % 2) == 0)
+		if ((num % i) == 0)
 			return(0);
 
-	//observe que ser for verdadeiro vamos sair da função
-	//então não precisamos do else
+	//observe que ser for verdadeiro vamos sair da funÃ§Ã£o
+	//entÃ£o nÃ£o precisamos do else
 	return(1);
 }
 
